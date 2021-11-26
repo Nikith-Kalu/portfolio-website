@@ -115,7 +115,7 @@ body {
  * ## links
  * ------------------------------------------------------------------- */
 a {
-  color: #f9861a;
+  color: #daa431;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -1845,6 +1845,7 @@ input::-moz-focus-inner {
   min-height: 82rem;
   overflow: hidden;
   background-color: transparent;
+  background: rgba(36, 36, 34, 0.5);
   position: relative;
 }
 
