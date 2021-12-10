@@ -33,7 +33,7 @@
     * -------------------------------------------------- */
    // ES6 Class
 class TypeWriter {
-    constructor(txtElement, words, wait = 3000) {
+    constructor(txtElement, words, wait = 1000) {
       this.txtElement = txtElement;
       this.words = words;
       this.txt = '';
@@ -98,7 +98,17 @@ class TypeWriter {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
   }
-
+    /* visit counter
+    * -------------------------------------------------- */
+   const countEl = document.getElementById('count');
+   
+   function updateVisitCount() {
+       fetch('https://api.countapi.xyz/update/nikith-kalu/nkvisit/?amount=1')
+            .then(res => res.json())
+            .then(res => {
+                countEl.innerHTML = res.value;
+            });
+   }
    /* move header
     * -------------------------------------------------- */
     const ssMoveHeader = function () {
